@@ -52,7 +52,7 @@ public class LoginFeature {
         return Pattern.matches(regex, phoneNumber);
 }
         //Register the user and return a status message to confirm/deny
-        public String registerUser (String username, String password, String cellNumber) {
+        public String registerUser (String username, String password, String cellNumber, String firstName, String lastName) {
             if (!checkUserName(username)){
                 return "Username is not correctly formatted, please ensure that your "
                        + "username contains an underscore and is no more than 5 characters long ";
