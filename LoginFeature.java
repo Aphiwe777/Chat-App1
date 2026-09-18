@@ -66,7 +66,7 @@ public class LoginFeature {
                 return "Phone number incorrectly formatted, please ensure"
                         + "the international code is included";
                 
-                
+            }
                 //store details
                 this.registeredPassword = password;
                 this.registeredUsername = username;
@@ -78,7 +78,7 @@ public class LoginFeature {
             
             //compare registred credentials to see if theymatch with entered credntials
             
-            public boolean loginUser (String username, String password);
+            public boolean loginUser (String username, String password){
             if (this.registeredUsername == null || this.registeredPassword == null){
             
            }
@@ -87,11 +87,27 @@ public class LoginFeature {
         }
 
          //Return message for login status
+public String returnLoginStatus(boolean isLoggedIn){
+    if (isLoggedIn) {
+        return "Welcome " + firstName + ", " + lastName + " it's great to see you again.";
+    } else {
+        return "Username or password incorrect, please try again.";
+    }
+}
+  
 
-
-        
-        
- 
-
+//elements for testing 
+     public void setRegisteredUsername(String registerdUsername){
+         this.registeredUsername = registeredUsername;
+     }  
+      public void setRegisteredPassword(String registeredPassword) {
+          this.registeredPassword = registeredPassword;
+      }
+      public void setfirstName(String firstName) {
+          this.firstName = firstName;
+      }
+      public void setLastName(String lastName) {
+          
+      }
 
 }
