@@ -34,10 +34,24 @@ public class Main {
                     + " 1. '_'underscore"
                     + "2. five charactters long)");
             username = scanner.nextLine();
-            if (loginSystem.checkUserName(username));
-            System.out.println("");
+            if (loginSystem.checkUserName(username)) {
+            System.out.println("Username successfully captured.");
+        } else {
+                System.out.println("Username incorrectly formatted, please try again.");
         }
         
     }
+        
+//Prompt user for valid password (must meet conditions)
+    String password;
+    while (true) {
+        System.out.println("Enter password. Must contain: "
+                + "1. >= 8 characters"
+                + "2. uppercase letter"
+                + "3. number"
+                + "4. a special character");
+        password =scannernextLine();
+        if (loginSys)
+    }
     
-}
+
