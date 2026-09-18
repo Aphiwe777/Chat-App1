@@ -50,8 +50,34 @@ public class Main {
                 + "2. uppercase letter"
                 + "3. number"
                 + "4. a special character");
-        password =scannernextLine();
-        if (loginSys)
+        password =scanner.nextLine();
+        if (loginSystem.checkPasswordComplexity(password)) {
+            System.out.println("Password successfully captured");
+        } else{
+            System.out.println("Password inaccurately formatted, please try again.");          
+        }
+        System.out.println("Enter your phone number");
+        String phoneNumber = scanner.nextLine();
+        
+        //Registration
+        String registrationResult = loginSystem.registerUser(username, password, phoneNumber, firstName, lastName);
+        System.out.println("\n" + registrationResult + "\n");
+        
+        //login
+        System.out.println("LOGIN");
+        System.out.println("Enter Your Username: ");
+        String loginUsername = scanner,nextLine();
+        
+        System.out.println("Enter Password: ");
+        String loginUsername = scanner.nextLine() ;
+        
+        boolean isLoggedIn = loginSystem.loginUser(loginUsername, loginPassword);
+        String loginMessage = loginSystem.returnLoginStatus(isLoggedIn);
+        
+        System.out.println("\n" + loginMessage);
+        scanner.close();
+    }
+        }
     }
     
 
